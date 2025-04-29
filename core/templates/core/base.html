@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}Cesarin Dev{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Cesarin.dev</h1>
+        <nav>
+            <a href="/inicio">Inicio</a>
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/proyectos">Proyectos</a>
+            <a href="/contacto">Contacto</a>
+            <a href="/signup">signup</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cesarin.dev — Todos los derechos reservados</p>
+    </footer>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
